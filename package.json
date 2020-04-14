@@ -1,14 +1,16 @@
 {
   "name": "friday",
   "version": "1.0.0",
-  "description": "Ai bot",
+  "description": "Natural Language processing Bot.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "author": "Hasib",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-nlp": "^4.3.0",
+    "socket.io": "^2.3.0"
   }
 }
