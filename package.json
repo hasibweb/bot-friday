@@ -12,5 +12,8 @@
     "express": "^4.17.1",
     "node-nlp": "^4.3.0",
     "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "sass": "^1.26.3"
   }
 }

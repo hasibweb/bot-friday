@@ -1,0 +1,44 @@
+@import "./bootstrap.min.scss";
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+#message-area {
+  .card {
+    height: 350px;
+    .card-body {
+      position: relative;
+      .badge {
+        font-size: 100%;
+      }
+      .messae-list {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        ul {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: calc(100% - 77px);
+          overflow: hidden;
+          overflow-y: scroll;
+          -ms-overflow-style: none;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+    }
+
+    form {
+      position: absolute;
+      width: calc(100% - (1.25rem * 2));
+      left: 1.25rem;
+      bottom: 1.25rem;
+    }
+  }
+}
