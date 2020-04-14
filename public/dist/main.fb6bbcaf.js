@@ -121,6 +121,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 $(window).on("load", function () {
   preloader();
 });
+$(document).ready(function () {
+  initBot();
+}); // Preloader
 
 function preloader() {
   var _this = this;
@@ -128,6 +131,11 @@ function preloader() {
   $("#preloader").fadeOut("slow", function () {
     $(_this).remove();
   });
+} // Initialize Bot
+
+
+function initBot() {
+  console.log("Bot Ready...");
 }
 },{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

@@ -10985,6 +10985,7 @@ ul {
 
 body {
   position: relative;
+  letter-spacing: 1px;
 }
 
 #preloader {
@@ -11003,8 +11004,10 @@ body {
   text-align: center;
 }
 #preloader p {
-  margin-top: -200px;
+  margin-top: -150px;
   margin-left: -50px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 #message-area .card {
