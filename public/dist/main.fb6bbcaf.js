@@ -164,7 +164,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     //   Dynamic Class name
     var isBot = sender === "bot" ? "bg-primary float-left" : "bg-secondary mr-1 float-right"; // Creating new list element and apending to dom
 
-    var msgLI = " <li class=\"clearfix\"> \n            <p class='d-inline-block mb-0 px-2 py-1 rounded font-italic ".concat(isBot, "'> ").concat(msg, " </p>\n          \n          </li>");
+    var msgLI = " <li class=\"clearfix\"> \n            <p class='d-inline-block mb-0 px-2 py-1 rounded font-italic ".concat(isBot, "'> ").concat(msg, " </p> </li>");
     $("#output-message").append(msgLI);
   }
 })(jQuery);
@@ -196,7 +196,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60071" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55142" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
