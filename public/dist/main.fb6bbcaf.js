@@ -139,7 +139,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     var socket = io(); // Output Message when event happne
 
     socket.on("message", function (msg, sender) {
-      outputDOM(msg, sender);
+      outputDOM(msg, sender); //   Scroll to bottom when has new message
+
       $("#output-message").scrollTop($("#output-message").prop("scrollHeight"));
     }); // Send Message on Form Submit
 

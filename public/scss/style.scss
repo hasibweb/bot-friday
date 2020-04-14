@@ -36,7 +36,7 @@ body {
 // Message Box Style
 #message-area {
   .card {
-    height: 350px;
+    height: 450px;
     .card-body {
       position: relative;
       .badge {
@@ -51,7 +51,7 @@ body {
           top: 0;
           left: 0;
           width: 100%;
-          height: calc(100% - 77px);
+          height: calc(100% - 57px);
           overflow: hidden;
           overflow-y: scroll;
           //   -ms-overflow-style: none;

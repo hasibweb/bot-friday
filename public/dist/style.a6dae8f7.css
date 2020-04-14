@@ -11011,7 +11011,7 @@ body {
 }
 
 #message-area .card {
-  height: 350px;
+  height: 450px;
 }
 #message-area .card .card-body {
   position: relative;
@@ -11029,7 +11029,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - 77px);
+  height: calc(100% - 57px);
   overflow: hidden;
   overflow-y: scroll;
 }

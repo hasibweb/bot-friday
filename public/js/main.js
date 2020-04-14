@@ -18,6 +18,7 @@
     // Output Message when event happne
     socket.on("message", (msg, sender) => {
       outputDOM(msg, sender);
+      //   Scroll to bottom when has new message
       $("#output-message").scrollTop($("#output-message").prop("scrollHeight"));
     });
 
