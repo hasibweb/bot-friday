@@ -60,7 +60,7 @@
             "intent": "greetings.hello",
             "domain": "default"
           },
-          "howdi": {
+          "hey": {
             "intent": "greetings.hello",
             "domain": "default"
           }
@@ -107,7 +107,7 @@
           },
           {
             "domain": "default",
-            "utterance": "howdy",
+            "utterance": "hey",
             "intent": "greetings.hello"
           }
         ],
@@ -140,7 +140,7 @@
               "go": 1,
               "hello": 1,
               "hi": 1,
-              "howdi": 1
+              "hey": 1
             },
             "intents": {
               "greetings.bye": 1,
@@ -165,7 +165,7 @@
               "greetings.hello": [
                 "hello",
                 "hi",
-                "howdi"
+                "hey"
               ]
             },
             "featuresToIntent": {
@@ -214,7 +214,7 @@
               "hi": [
                 "greetings.hello"
               ],
-              "howdi": [
+              "hey": [
                 "greetings.hello"
               ]
             },
@@ -235,7 +235,7 @@
                 "go",
                 "hello",
                 "hi",
-                "howdi",
+                "hey",
                 "nonefeature"
               ],
               "intents": [
@@ -353,7 +353,7 @@
       ],
       [
         "en",
-        "howdy"
+        "hey"
       ]
     ]
   },
@@ -384,7 +384,13 @@
             "answer": "Hey there!"
           },
           {
-            "answer": "Greetings!"
+            "answer": "Hi, How are you?"
+          },
+          {
+            "answer": "Hello sir!"
+          },
+          {
+            "answer": "hey, what's up"
           }
         ]
       }
