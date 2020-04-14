@@ -164,7 +164,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     //   Dynamic Class name
     var isBot = sender === "bot" ? "bg-primary float-left" : "bg-secondary mr-1 float-right"; // Creating new list element and apending to dom
 
-    var msgLI = " <li class=\"clearfix\"> \n            <p class='d-inline-block mb-0 px-2 py-1 rounded font-italic ".concat(isBot, "'> ").concat(msg, " </p> </li>");
+    var msgLI = " <li class=\"clearfix\"> \n            <p class='d-inline-block mb-1 px-2 py-1 rounded font-italic ".concat(isBot, "'> ").concat(msg, " </p> </li>");
     $("#output-message").append(msgLI);
   }
 })(jQuery);
