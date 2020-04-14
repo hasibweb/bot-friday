@@ -11005,10 +11005,16 @@ ul {
   height: calc(100% - 77px);
   overflow: hidden;
   overflow-y: scroll;
-  -ms-overflow-style: none;
 }
 #message-area .card .card-body .messae-list ul::-webkit-scrollbar {
-  display: none;
+  width: 0.3em;
+}
+#message-area .card .card-body .messae-list ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px #fff;
+}
+#message-area .card .card-body .messae-list ul::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
 #message-area .card form {
   position: absolute;
