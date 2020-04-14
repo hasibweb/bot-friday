@@ -117,28 +117,19 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/bot/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
+})({"js/main.js":[function(require,module,exports) {
+$(window).on("load", function () {
+  preloader();
 });
-exports.default = void 0;
-var botName = "Friday My Friend.";
-var _default = botName;
-exports.default = _default;
-},{}],"js/main.js":[function(require,module,exports) {
-"use strict";
 
-var _bot = _interopRequireDefault(require("./bot"));
+function preloader() {
+  var _this = this;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-console.log("Main UI", _bot.default);
-$("h1").on("click", function (e) {
-  return console.log(e);
-});
-},{"./bot":"js/bot/index.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  $("#preloader").fadeOut("slow", function () {
+    $(_this).remove();
+  });
+}
+},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

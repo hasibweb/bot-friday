@@ -1,5 +1,9 @@
-import botName from "./bot";
+$(window).on("load", () => {
+  preloader();
+});
 
-console.log("Main UI", botName);
-
-$("h1").on("click", (e) => console.log(e));
+function preloader() {
+  $("#preloader").fadeOut("slow", () => {
+    $(this).remove();
+  });
+}

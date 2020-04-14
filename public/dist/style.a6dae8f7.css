@@ -10983,6 +10983,30 @@ ul {
   padding: 0;
 }
 
+body {
+  position: relative;
+}
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  background: #444;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#preloader p {
+  margin-top: -200px;
+  margin-left: -50px;
+}
+
 #message-area .card {
   height: 350px;
 }
