@@ -42,11 +42,12 @@
     //   Dynamic Class name
     const isBot =
       sender === "bot"
-        ? "float-left badge-primary"
-        : "float-right badge-secondary mr-1";
+        ? "bg-primary float-left"
+        : "bg-secondary mr-1 float-right";
     // Creating new list element and apending to dom
     const msgLI = ` <li class="clearfix"> 
-          <p class="badge px-3 py-2 mb-2 ${isBot}"> ${msg} </p> 
+            <p class='d-inline-block mb-0 px-2 py-1 rounded ${isBot}'> ${msg} </p>
+          
           </li>`;
     $("#output-message").append(msgLI);
   }

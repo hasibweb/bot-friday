@@ -162,9 +162,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   function outputDOM(msg, sender) {
     //   Dynamic Class name
-    var isBot = sender === "bot" ? "float-left badge-primary" : "float-right badge-secondary mr-1"; // Creating new list element and apending to dom
+    var isBot = sender === "bot" ? "bg-primary float-left" : "bg-secondary mr-1 float-right"; // Creating new list element and apending to dom
 
-    var msgLI = " <li class=\"clearfix\"> \n          <p class=\"badge px-3 py-2 mb-2 ".concat(isBot, "\"> ").concat(msg, " </p> \n          </li>");
+    var msgLI = " <li class=\"clearfix\"> \n            <p class='d-inline-block mb-0 px-2 py-1 rounded ".concat(isBot, "'> ").concat(msg, " </p>\n          \n          </li>");
     $("#output-message").append(msgLI);
   }
 })(jQuery);
