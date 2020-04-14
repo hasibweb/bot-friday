@@ -46,7 +46,7 @@
         : "bg-secondary mr-1 float-right";
     // Creating new list element and apending to dom
     const msgLI = ` <li class="clearfix"> 
-            <p class='d-inline-block mb-0 px-2 py-1 rounded font-italic ${isBot}'> ${msg} </p>
+            <p class='d-inline-block mb-1 px-2 py-1 rounded font-italic ${isBot}'> ${msg} </p>
           
           </li>`;
     $("#output-message").append(msgLI);
