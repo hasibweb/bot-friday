@@ -118,25 +118,55 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/main.js":[function(require,module,exports) {
-$(window).on("load", function () {
-  preloader();
-});
-$(document).ready(function () {
-  initBot();
-}); // Preloader
-
-function preloader() {
-  var _this = this;
-
-  $("#preloader").fadeOut("slow", function () {
-    $(_this).remove();
+(function ($) {
+  $(window).on("load", function () {
+    preloader();
   });
-} // Initialize Bot
+  $(document).ready(function () {
+    initBot();
+  }); // Preloader
+
+  function preloader() {
+    var _this = this;
+
+    $("#preloader").fadeOut("slow", function () {
+      return $(_this).remove();
+    });
+  } // Initialize Bot
 
 
-function initBot() {
-  console.log("Bot Ready...");
-}
+  function initBot() {
+    var socket = io(); // Output Message when event happne
+
+    socket.on("message", function (msg, sender) {
+      outputDOM(msg, sender);
+      $("#output-message").scrollTop($("#output-message").prop("scrollHeight"));
+    }); // Send Message on Form Submit
+
+    $("#command-form").on("submit", function (e) {
+      e.preventDefault();
+      var command = $("#command").val().trim();
+
+      if (command) {
+        outputDOM(command, "user");
+        socket.emit("message", command); // reset input
+
+        $("#command").val("");
+      } else {
+        $("#command").val("");
+      }
+    });
+  } // Output messages to DOM
+
+
+  function outputDOM(msg, sender) {
+    //   Dynamic Class name
+    var isBot = sender === "bot" ? "float-left badge-primary" : "float-right badge-secondary mr-1"; // Creating new list element and apending to dom
+
+    var msgLI = " <li class=\"clearfix\"> \n          <p class=\"badge px-3 py-2 mb-2 ".concat(isBot, "\"> ").concat(msg, " </p> \n          </li>");
+    $("#output-message").append(msgLI);
+  }
+})(jQuery);
 },{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -165,7 +195,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51090" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60071" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
